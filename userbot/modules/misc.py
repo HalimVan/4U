@@ -73,7 +73,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's something for you to read:\n"
-        "\n[ProjectBishUserBot's README.md file](https://github.com/adekmaulana/ProjectBish/blob/master/README.md)"
+        "\n[4UBot's README.md file](https://github.com/yusrilsyahruddin/4U/blob/master/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Setup Guide - Google Drive](https://telegra.ph/How-To-Setup-Google-Drive-04-03)"
         "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
@@ -101,7 +101,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "Official Repo [here](https://github.com/adekmaulana/ProjectBish) & this my fork repo [here](https://github.com/GudMeong/ProjectBish) GitHub page."
+        "Official Repo [here](https://github.com/adekmaulana/ProjectBish) & this my fork repo [here](https://github.com/yusrilsyahruddin/4U) GitHub page."
     )
 
 
