@@ -17,17 +17,17 @@ from userbot.events import register
 # ========================= CONSTANTS ============================
 AFKSTR = [
     "aku sedang sibuk sekarang . jika penting tinggalkan pesan disini!",
-    "Saya sedang tidak online sekarang. Jika memang penting, Tinggalkan Pesan!",
+    "Saya sedang pergi mencari wanita cantik dan sexy!",
     "Mungkin belum saatnya kita bertemu.",
     "Aku Akan Kembali Sebentar Lagi dan Jika tidak...,\ntunggulah lebih lama :v.",
     "Aku sedang tidak disini. \nYang pasti Aku sedang berada di suatu tempat.",
     "Aku Sedang Keluar jika Anda Butuh Saya Tinggalkan Pesan Penting Disini.",
-    "Ada 3 hal di duinia ini yang tidak bisa kuhitung, jumlah bintang di langit, ikan di laut dan cintaku padamu",
+    "Ada 3 hal di dunia ini yang tidak bisa kuhitung, jumlah bintang di langit, ikan di laut dan cintaku padamu",
     "Rasa sayangku ke kamu kaya pas powerangers waktu gak ada monster nggak berubah.",
     "Coba cari aku kearah ini\n---->",
     "Coba cari aku kearah ini\n<----",
-    "Mohon Tinggalkan Pesan Yang penting kepadaku, Jika Tak Penting Tidak Usah Mengirim Pesan Â¯\_(ãƒ„)_/Â¯.",
-    "Sudah! Jangan ada hubungan lagi, Aku tau kau selingkuh!.",
+    "Mohon Tinggalkan Pesan Yang penting kepadaku, Jika Tak Penting Tak Usah Mengirim Pesan Â¯\_(ãƒ„)_/Â¯.",
+    "Sudah! Jangan ada hubungin aku lagi, Aku tau kamu selingkuh!.",
     "Jika Aku Online,Aku bakal memberitahumu dimana aku.\nTapi aku tidak, \nJadi tanyakan aku saat aku kembali...",
     "Aku Pergi!\nAku tidak tahu kapan aku kembali!\nKuharap Beberapa menit setelah pesan ini!",
     "Aku lagi Gak Ada Sekarang :(, \nJadi Harap lampirkan Nama pacarmu, alamat pacarmu, nomor wa pacarmu, dan sertakan gambarnya ya!",
@@ -58,7 +58,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply("Ane Tetep AFK."
+                        await mention.reply("Saya Masih AFK."
                                             f"\nKarena: `{AFKREASON}`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
