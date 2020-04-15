@@ -18,9 +18,9 @@ from userbot.events import register
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
     "Hei! Ini pesan otomatis.\n\n"
-    "Saya belum menyetujui Anda untuk PM belum ."
+    "Saya belum menyetujui Anda untuk PM ."
     "Tolong tunggu saya untuk melihat, saya kebanyakan menyetujui PMs .\n\n"
-    "'Sampai saat itu, jangan spam sore Mastor saya, Anda akan mendapatkan diblokir dan dilaporkan jika Anda melakukannya!`")
+    "'Sampai saat itu, jangan spam Tuan saya, Anda akan mendapatkan blokir dan dilaporkan jika Anda melakukannya!`")
 # =================================================================
 
 
