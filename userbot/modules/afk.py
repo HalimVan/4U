@@ -16,24 +16,24 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    "Saya sedang sibuk sekarang. Mungkin jika sangat penting anda bisa kirim nomor whatsapp pacarmu!",
-    "Saya sedang tidak online sekarang. Jika memang penting, Tinggalkan pesan setelah bunyi beep:\n`beeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeep`!",
+    "aku sedang sibuk sekarang . jika penting tinggalkan pesan disini!",
+    "Saya sedang tidak online sekarang. Jika memang penting, Tinggalkan Pesan!",
     "Mungkin belum saatnya kita bertemu.",
-    "Aku Akan Balik Sebentar Lagi dan Jika tidak...,\ntunggulah lebih lama :v.",
+    "Aku Akan Kembali Sebentar Lagi dan Jika tidak...,\ntunggulah lebih lama :v.",
     "Aku sedang tidak disini. \nYang pasti Aku sedang berada di suatu tempat.",
-    "Aku bukan orang yang spesial tapi aku selalu ada bersamamu,Kecuali sekarang aja sih.",
+    "Aku Sedang Keluar jika Anda Butuh Saya Tinggalkan Pesan Penting Disini.",
     "Ada 3 hal di duinia ini yang tidak bisa kuhitung, jumlah bintang di langit, ikan di laut dan cintaku padamu",
     "Rasa sayangku ke kamu kaya pas powerangers waktu gak ada monster nggak berubah.",
     "Coba cari aku kearah ini\n---->",
     "Coba cari aku kearah ini\n<----",
-    "Mohon Tinggalkan Pesan Yang penting kepadaku, Jika Tak Penting Ya udah Â¯\_(ãƒ„)_/Â¯.",
+    "Mohon Tinggalkan Pesan Yang penting kepadaku, Jika Tak Penting Tidak Usah Mengirim Pesan Â¯\_(ãƒ„)_/Â¯.",
     "Sudah! Jangan ada hubungan lagi, Aku tau kau selingkuh!.",
-    "Jika Aku Onlen,Aku bakal memberitahumu dimana aku.\nTapi aku tidak, \nJadi tanyakan aku saat aku kembali...",
+    "Jika Aku Online,Aku bakal memberitahumu dimana aku.\nTapi aku tidak, \nJadi tanyakan aku saat aku kembali...",
     "Aku Pergi!\nAku tidak tahu kapan aku kembali!\nKuharap Beberapa menit setelah pesan ini!",
-    "Ane lagi Gak Ada Sekarang :(, \nJadi Harap lampirkan Nama pacarmu, alamat pacarmu, nomor wa pacarmu, dan sertakan gambarnya ya!",
+    "Aku lagi Gak Ada Sekarang :(, \nJadi Harap lampirkan Nama pacarmu, alamat pacarmu, nomor wa pacarmu, dan sertakan gambarnya ya!",
     "Maap Yak, Ane Lagi kagak Disini,\nJadi Rasakan Kebebasan Mengobrol Dengan Userbot Ku ini.\nDan Aku akan kembali sebentar lagi.",
     "Aku Yakin Kamu Menunggu pesan balasan dariku!",
-    "Hidup sangatlah singkat,\nPerbanyak lah hidup ini dengan ibadah..\nJangan nonton JAV mulu!",
+    "Hidup sangatlah singkat,\nPerbanyak lah hidup ini dengan ibadah..",
     "Aku tidak disini sekarang..\nTetapi Jika Aku disini...\nMemang kamu mau menjalin hubungan kembali denganku?",
 ]
 # =================================================================
