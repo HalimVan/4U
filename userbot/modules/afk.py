@@ -36,9 +36,16 @@ AFKSTR = [
     "Hidup sangatlah singkat,\nPerbanyak lah hidup ini dengan ibadah..",
     "Aku tidak disini sekarang..\nTetapi Jika Aku disini...\nMemang kamu mau menjalin hubungan kembali denganku?",
 ]
+
+global USER_AFK  # pylint:disable=E0602
+global afk_time  # pylint:disable=E0602
+global afk_start
+global afk_end
+USER_AFK = {}
+afk_time = None
+afk_start = {}
+
 # =================================================================
-
-
 @register(incoming=True, disable_edited=True)
 async def mention_afk(mention):
     """ This function takes care of notifying the people who mention you that you are AFK."""
