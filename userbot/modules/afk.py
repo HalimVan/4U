@@ -97,7 +97,7 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply("Aku Tetap AFK."
+                        await sender.reply("Aku Masih AFK."
                                            f"\nKarena: `{AFKREASON}`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
@@ -161,7 +161,7 @@ async def type_afk_is_not_true(notafk):
 CMD_HELP.update({
     "afk":
     ".afk [Optional Reason]\
-\nUsage: Mengatur status Menjadi AFK.\nMenjawab Ke Orang Yang Merepli Kamu Atau PM \
+\nUsage: Mengatur status Menjadi AFK.\nMenjawab Ke Orang Yang Mereply Kamu Atau PM \
 Memberi Tahu Bahwa Kamu AFK dengan(alasan).\n\n Otomatis MeMatikan AFK saat Anda mengetik kembali apa pun, di mana saja , Eh benerkan Gini? ðŸ˜‚.\
 "
 })
