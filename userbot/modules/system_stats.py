@@ -125,13 +125,13 @@ async def amireallyalive(alive):
     await alive.edit("`"
                      "Aku hidup, untuk melayanimu....\n"
                      f"------------------------------------\n"
-                     f"•  Python:{python_version()}\n"
+                     f"•  Python : {python_version()}\n"
                      f"------------------------------------\n"
-                     f"•  Telethon version:{version.__version__}\n"
+                     f"•  Telethon version : {version.__version__}\n"
                      f"------------------------------------\n"
-                     f"•  User:{DEFAULTUSER}\n"
+                     f"•  User : {DEFAULTUSER}\n"
                      f"------------------------------------\n"
-                     f"•  Support:@ShizukaAkariBot\n"
+                     f"•  Support : @ShizukaAkariBot\n"
                      "`")
 
 
