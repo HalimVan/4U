@@ -15,7 +15,7 @@ googletrans
 google_images_download
 gTTS
 gTTS-token
-github
+
 hachoir
 heroku3
 httplib2
