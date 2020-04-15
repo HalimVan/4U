@@ -43,6 +43,6 @@ urbandict
 wikipedia
 telegraph
 python-dateutil
-git+https://github.com/johnwmillr/LyricsGenius.git
+git+https://github.com/yusrilsyahruddin/LyricsGenius.git
 pyfiglet
 covid
