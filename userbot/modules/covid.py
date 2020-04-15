@@ -22,7 +22,7 @@ async def corona(event):
         output_text += f"`meninggal   : {country_data['deaths']}`\n"
         output_text += f"`pulih       : {country_data['recovered']}`\n"
         output_text += (
-            "`Last update : "
+            "` Pembaruan Terakhir : "
             f"{datetime.utcfromtimestamp(country_data['last_update'] // 1000).strftime('%Y-%m-%d %H:%M:%S')}`\n"
         )
         output_text += f"Data provided by [Johns Hopkins University](https://j.mp/2xf6oxF)"
