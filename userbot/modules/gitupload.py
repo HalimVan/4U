@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # Ported to UserBot by @Mayur_Karaniya
 
-from github import Github
+# import github
 import aiohttp
 import asyncio
 import os
