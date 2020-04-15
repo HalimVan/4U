@@ -131,6 +131,7 @@ async def amireallyalive(alive):
                      f"------------------------------------\n"
                      f"•  User             : {DEFAULTUSER}\n"
                      f"------------------------------------\n"
+                     f"•  Support          : @ShizukaAkariBot\n"
                      "`")
 
 
