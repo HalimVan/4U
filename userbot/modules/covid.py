@@ -17,7 +17,7 @@ async def corona(event):
     covid = Covid()
     country_data = covid.get_status_by_country_name(country)
     if country_data:
-        output_text =  f"`Dikonfirmasi: {country_data['confirmed']}`\n"
+        output_text += f"`Dikonfirmasi: {country_data['confirmed']}`\n"
         output_text += f"`Aktif       : {country_data['active']}`\n"
         output_text += f"`meninggal   : {country_data['deaths']}`\n"
         output_text += f"`pulih       : {country_data['recovered']}`\n"
@@ -26,8 +26,9 @@ async def corona(event):
             f"{datetime.utcfromtimestamp(country_data['last_update'] // 1000).strftime('%Y-%m-%d %H:%M:%S')}`\n"
         )
         output_text += f"Data provided by [Johns Hopkins University](https://j.mp/2xf6oxF)"
-        output_text += f"Orang Tertampan(ShizukaAkari)"
-    else:
+
+        output_text += f"Support [ShizukaAkari](
+    else:https://t.me/ShizukaSupport)"
         output_text = "No information yet about this country!"
     await event.edit(f"Corona Virus Info in {country}:\n\n{output_text}")
 
