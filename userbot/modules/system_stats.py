@@ -126,12 +126,14 @@ async def amireallyalive(alive):
                      "Aku hidup, untuk melayanimu....\n"
                      f"------------------------------------\n"
                      f"•  Python : {python_version()}\n"
-                     f"------------------------------------\n"
                      f"•  Telethon version : {version.__version__}\n"
                      f"------------------------------------\n"
                      f"•  User : {DEFAULTUSER}\n"
                      f"------------------------------------\n"
                      f"•  Support : @ShizukaAkariBot\n"
+                     f"------------------------------------\n"
+                     f"•  Tetaplah Hidup Walaupun Tidak Berguna\n"
+                     f"------------------------------------\n"
                      "`")
 
 
