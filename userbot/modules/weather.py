@@ -37,7 +37,7 @@ async def get_tz(con):
         return
 
 
-@register(outgoing=True, pattern="^.weather(?: |$)(.*)")
+@register(outgoing=True, pattern="^.c(?: |$)(.*)")
 async def get_weather(weather):
     """ For .weather command, gets the current weather of a city. """
 
@@ -131,7 +131,7 @@ async def get_weather(weather):
 
 
 CMD_HELP.update({
-    "weather":
-    ">`.weather <city> or .weather <city>, <country name/code>`"
-    "\nUsage: Gets the weather of a city."
+    "cuaca":
+    ">`.c <kota> atau .c <kota>, <nama negara/kode>`"
+    "\nPenggunaan: mendapat cuaca sebuah kota."
 })
