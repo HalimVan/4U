@@ -32,7 +32,7 @@ KANGING_STR = [
 ]
 
 
-@register(outgoing=True, pattern="^.kang")
+@register(outgoing=True, pattern="^.k")
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
@@ -263,7 +263,7 @@ async def resize_photo(photo):
     return image
 
 
-@register(outgoing=True, pattern="^.stkrinfo$")
+@register(outgoing=True, pattern="^.sinfo$")
 async def get_pack_info(event):
     if not event.is_reply:
         return await event.edit("`I can't fetch info from nothing, can I ?!`")
@@ -306,12 +306,12 @@ async def get_pack_info(event):
 
 CMD_HELP.update({
     "stickers":
-    ">`.kang [emoji('s)]?`"
-    "\nUsage: Reply .kang to a sticker or an image to kang it to your userbot pack "
-    "\nor specify the emoji you want to."
-    "\n\n>`.kang (emoji['s]]?` [number]?"
-    "\nUsage: Kang's the sticker/image to the specified pack but uses 🤔 as emoji "
-    "or choose the emoji you want to."
-    "\n\n>`.stkrinfo`"
-    "\nUsage: Gets info about the sticker pack."
+    ">`.k [emoji('s)]?`"
+    "\nPenggunaan: jawaban .k stiker atau gambar kang itu ke paket userbot Anda "
+    "\natau spesifikasikan emoji yang Anda inginkan.."
+    "\n\n>`.k (emoji['s]]?` [nomor]?"
+    "\nPenggunaan: stiker Kang / gambar pada paket yang ditentukan namun menggunakan 🤔 sebagai emoji "
+    "atau pilih emoji yang kau mau .."
+    "\n\n>`.sinfo`"
+    "\nPenggunaan: mengambil info tentang paket stiker."
 })
