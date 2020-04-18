@@ -20,15 +20,15 @@ from telethon.tl.types import DocumentAttributeSticker
 
 KANGING_STR = [
     "Menggunakan sihir untuk kang stiker ini ...",
-    "Menjiplak hehe...",
-    "Mengundang stiker ini ke tas saya...",
-    "Kanging stiker ini ...",
-    "Hei itu stiker yang bagus !boleh kalau aku main kang?!..",
+    "Ijin nyolong om hehe...",
+    "Memasukkan stiker ini ke pack saya...",
+    "Mencuri stiker ini ...",
+    "Hei itu stiker yang bagus !boleh kalau aku curi?!..",
     "hehe aku curi sticker mu \ nhehe .",
-    "lihat ke sana ( ☉ ｡ ☉)!→\ \ tidak sayangnya aku kang ini...",
-    "Mawar yang merah violet yang biru, gemerincing stiker ini sehingga pacc saya terlihat keren",
+    "lihat ke sana ( ☉ ｡ ☉)!→\ \ tidak sayangnya aku curi ini...",
+    "Pergi ke tuban, beli buah rambutan, mantan ke pelaminan, kenapa kamu masih sendirian:p",
     "...",
-    "Pak mencuri stiker Anda mencuri stiker ini ... ",
+    "Sedang mengawasi sekitar ... ",
 ]
 
 
