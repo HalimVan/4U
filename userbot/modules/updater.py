@@ -63,11 +63,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f'{txt}\n`Invalid Heroku credentials for deploying userbot dyno.`'
+                f'{txt}\n`Kredensial Heroku tidak valid untuk menyebarkan userbot dyno.`'
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nUserbot dyno build in progress, please wait...`'
+                         '\nDyno Userbot sedang berlangsung, silakan tunggu...`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -83,11 +83,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         except GitCommandError as error:
             await event.edit(f'{txt}\n`Here is the error log:\n{error}`')
             return repo.__del__()
-        await event.edit('`Successfully Updated!\n'
-                         'Restarting, please wait...`')
+        await event.edit('`Berhasil Diperbarui!\n'
+                         'Memulai ulang, mohon tunggu...`')
     else:
         await event.edit('`[HEROKU]:'
-                         '\nPlease set up` **HEROKU_API_KEY** `variable.`'
+                         '\nTolong persiapkan.` **HEROKU_API_KEY** `variabel.`'
                          )
     return
 
@@ -98,8 +98,8 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('`Successfully Updated!\n'
-                     'Bot is restarting... Wait for a second!`')
+    await event.edit('`Berhasil Diperbarui!\n'
+                     'Bot sedang memulai ulang... Tunggu sebentar !`')
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
     execle(sys.executable, *args, environ)
@@ -109,13 +109,13 @@ async def update(event, repo, ups_rem, ac_br):
 @register(outgoing=True, pattern=r"^.update(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
-    await event.edit("`Checking for updates, please wait....`")
+    await event.edit("`Memeriksa pembaruan, silakan tunggu....`")
     conf = event.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     try:
-        txt = "`Oops.. Updater cannot continue due to "
-        txt += "some problems occured`\n\n**LOGTRACE:**\n"
+        txt = "'UPS.. Pembaruan tidak dapat dilanjutkan karena "
+        txt += "beberapa masalah terjadi`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
         await event.edit(f'{txt}\n`directory {error} is not found`')
@@ -126,8 +126,8 @@ async def upstream(event):
     except InvalidGitRepositoryError as error:
         if conf is None:
             return await event.edit(
-                f"`Unfortunately, the directory {error} does not seem to be a git repository."
-                "\nBut we can fix that by force updating the userbot using .update now.`"
+                f"`Sayangnya, direktori {error} sepertinya bukan repositori git."
+                "\nTapi kita bisa memperbaikinya dengan paksa memperbarui userbot menggunakan .update now.`"
             )
         repo = Repo.init()
         origin = repo.create_remote('upstream', off_repo)
@@ -176,13 +176,13 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('`do ".update now/deploy" to update`')
+        return await event.respond('`ketik perintah ".update now/deploy" untuk memperbarui`')
 
     if force_update:
         await event.edit(
             '`Force-Syncing to latest stable userbot code, please wait...`')
     else:
-        await event.edit('`Updating userbot, please wait....`')
+        await event.edit('`Memperbarui userbot, Mohon tunggu....`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
     elif conf == "deploy":
