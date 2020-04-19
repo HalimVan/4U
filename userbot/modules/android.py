@@ -39,7 +39,7 @@ async def magisk(request):
     await request.edit(releases)
 
 
-@register(outgoing=True, pattern=r"^.device(?: |$)(\S*)")
+@register(outgoing=True, pattern=r"^.d(?: |$)(\S*)")
 async def device_info(request):
     """ get android device basic info from its codename """
     textx = await request.get_reply_message()
@@ -49,7 +49,7 @@ async def device_info(request):
     elif textx:
         device = textx.text
     else:
-        return await request.edit("`Usage: .device <codename> / <model>`")
+        return await request.edit("`Usage: .d <codename> / <model>`")
     found = [
         i for i in get(DEVICES_DATA).json()
         if i["device"] == device or i["model"] == device
@@ -103,7 +103,7 @@ async def codename_info(request):
     await request.edit(reply)
 
 
-@register(outgoing=True, pattern=r"^.specs(?: |)([\S]*)(?: |)([\s\S]*)")
+@register(outgoing=True, pattern=r"^.s(?: |)([\S]*)(?: |)([\s\S]*)")
 async def devices_specifications(request):
     """ Mobile devices specifications """
     textx = await request.get_reply_message()
@@ -115,7 +115,7 @@ async def devices_specifications(request):
         brand = textx.text.split(' ')[0]
         device = ' '.join(textx.text.split(' ')[1:])
     else:
-        return await request.edit("`Usage: .specs <brand> <device>`")
+        return await request.edit("`Usage: .s <brand> <device>`")
     all_brands = BeautifulSoup(
         get('https://www.devicespecifications.com/en/brand-more').content,
         'lxml').find('div', {
@@ -186,11 +186,11 @@ CMD_HELP.update({
     "android":
     ">`.magisk`"
     "\nGet latest Magisk releases"
-    "\n\n>`.device <codename>`"
+    "\n\n>`.d <codename>`"
     "\nUsage: Get info about android device codename or model."
     "\n\n>`.codename <brand> <device>`"
     "\nUsage: Search for android device codename."
-    "\n\n>`.specs <brand> <device>`"
+    "\n\n>`.s <brand> <device>`"
     "\nUsage: Get device specifications info."
     "\n\n>`.twrp <codename>`"
     "\nUsage: Get latest twrp download for android device."
