@@ -12,7 +12,7 @@ from userbot.events import register
 
 @register(outgoing=True, pattern="^.covid (.*)")
 async def corona(event):
-    await event.edit("`Processing...`")
+    await event.edit("`Proses...`")
     country = event.pattern_match.group(1)
     covid = Covid()
     country_data = covid.get_status_by_country_name(country)
@@ -20,7 +20,7 @@ async def corona(event):
         output_text =  f"`Dikonfirmasi : {country_data['confirmed']}`\n"
         output_text += f"`Aktif        : {country_data['active']}`\n"
         output_text += f"`Meninggal    : {country_data['deaths']}`\n"
-        output_text += f"`Pulih.       : {country_data['recovered']}`\n"
+        output_text += f"`Pulih       : {country_data['recovered']}`\n"
         output_text += (
             "`Last update : "
             f"{datetime.utcfromtimestamp(country_data['last_update'] // 1000).strftime('%Y-%m-%d %H:%M:%S')}`\n"
@@ -34,5 +34,5 @@ async def corona(event):
 CMD_HELP.update({
         "covid": 
         ".covid <negara>"
-        "\nPenggunaan: mendapatkan informasi tentang data covid-19 di negara Anday.\n"
+        "\nPenggunaan: mendapatkan informasi tentang data covid-19 di negara Anda\n"
     })
