@@ -27,7 +27,7 @@ async def corona(event):
         )
         output_text += f"Data yang disediakan oleh YusrilSyahruddin](https://www.instagram.com/yuskychan/?hl=id)"
     else:
-        output_text = "Tulis nama negara dengan benar BANGSAT!"
+        output_text = "No information yet about this country!"
     await event.edit(f"Corona Virus Info in {country}:\n\n{output_text}")
 
 
