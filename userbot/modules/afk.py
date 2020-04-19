@@ -32,7 +32,7 @@ AFKSTR = [
     "Aku sedang jauh dari keyboard sekarang, tetapi jika Anda akan berteriak cukup keras di layar Anda, aku mungkin hanya mendengar Anda.",
     "Aku pergi ke arah sana\n---->",
     "Aku pergi lewat sini\n<----",
-    "Silakan tinggalkan pesan dan membuat saya merasa bahkan lebih penting.",
+    "Silahkan tinggalkan pesan dan membuat saya merasa bahkan lebih penting.",
     "Saya tidak di sini jadi berhenti menulis kepada saya,\natau Anda akan menemukan diri Anda dengan layar penuh pesan Anda sendiri.",
     "Jika aku ada di sini,\nAku akan memberitahumu di mana aku berada.\n\nTapi aku tidak,\njadi tanyakan padaku ketika aku kembali...",
     "Aku pergi!\nAku tidak tahu kapan aku akan kembali!\nMudah-mudahan beberapa menit dari sekarang!",
@@ -156,14 +156,14 @@ async def mention_afk(mention):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime('%A')
             elif hours > 1:
-                afk_since = f"`{int(hours)}h{int(minutes)} menit` yang lalu"
+                afk_since = f"`{int(hours)} jam {int(minutes)} menit` yang lalu"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}m{int(seconds)} detik` yang lalu"
+                afk_since = f"`{int(minutes)} menit {int(seconds)} detik` yang lalu"
             else:
                 afk_since = f"`{int(seconds)} detik` yang lalu"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"Aku AFK sejak {afk_since}.\
+                    await mention.reply(f"Aku pergi AFK sejak {afk_since}.\
                         \nKarena: `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -232,14 +232,14 @@ async def afk_on_pm(sender):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime('%A')
             elif hours > 1:
-                afk_since = f"`{int(hours)}h{int(minutes)} menit` yang lalu"
+                afk_since = f"`{int(hours)} jam {int(minutes)} menit` yang lalu"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}m{int(seconds)} detik` yang lalu"
+                afk_since = f"`{int(minutes)} menit {int(seconds)} detik` yang lalu"
             else:
                 afk_since = f"`{int(seconds)} detik` yang lalu"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"Aku AFK sejak {afk_since}.\
+                    await sender.reply(f"Aku pergi AFK sejak {afk_since}.\
                         \nKarena: `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
