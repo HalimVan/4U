@@ -52,8 +52,8 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         heroku_applications = heroku.apps()
         if HEROKU_APP_NAME is None:
             await event.edit(
-                '`[HEROKU]: Please set up the` **HEROKU_APP_NAME** `variable'
-                ' to be able to deploy newest changes of userbot.`'
+                '`[HEROKU]: Silakan mengatur` **HEROKU_APP_NAME** `variabel'
+                'untuk dapat menyebarkan perubahan terbaru dari userbot.`'
             )
             repo.__del__()
             return
@@ -81,7 +81,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         try:
             remote.push(refspec="HEAD:refs/heads/master", force=True)
         except GitCommandError as error:
-            await event.edit(f'{txt}\n`Here is the error log:\n{error}`')
+            await event.edit(f'{txt}\n`berikut adalah error log:\n{error}`')
             return repo.__del__()
         await event.edit('`Berhasil Diperbarui!\n'
                          'Memulai ulang, mohon tunggu...`')
@@ -118,10 +118,10 @@ async def upstream(event):
         txt += "beberapa masalah terjadi`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
-        await event.edit(f'{txt}\n`directory {error} is not found`')
+        await event.edit(f'{txt}\n`direktori {error} tidak ditemukan`')
         return repo.__del__()
     except GitCommandError as error:
-        await event.edit(f'{txt}\n`Early failure! {error}`')
+        await event.edit(f'{txt}\n`Kegagalan awal! {error}`')
         return repo.__del__()
     except InvalidGitRepositoryError as error:
         if conf is None:
@@ -140,11 +140,11 @@ async def upstream(event):
     ac_br = repo.active_branch.name
     if ac_br != UPSTREAM_REPO_BRANCH:
         await event.edit(
-            '**[UPDATER]:**\n'
-            f'`Looks like you are using your own custom branch ({ac_br}). '
-            'in that case, Updater is unable to identify '
-            'which branch is to be merged. '
-            'please checkout to any official branch`')
+            '**[PEMBARUAN]:**\n'
+            f'`Sepertinya Anda menggunakan cabang Anda sendiri Suai ({ac_br}). '
+            'dalam hal ini, Pembaruan tidak dapat mengidentifikasi '
+            'cabang mana yang akan digabung. '
+            'silakan periksa untuk setiap cabang resmi`')
         return repo.__del__()
     try:
         repo.create_remote('upstream', off_repo)
@@ -158,13 +158,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n`Your USERBOT is`  **up-to-date**  `with`  **{UPSTREAM_REPO_BRANCH}**\n')
+            f'\n`USERBOT Anda`  **sudah ter-update **  `dengan`  **{UPSTREAM_REPO_BRANCH}**\n')
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
+        changelog_str = f'**Pembaruan baru tersedia untuk [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
         if len(changelog_str) > 4096:
-            await event.edit("`Changelog is too big, view the file to see it.`")
+            await event.edit("`Changelog terlalu besar, lihat berkas untuk melihatnya.`")
             file = open("output.txt", "w+")
             file.write(changelog_str)
             file.close()
@@ -180,7 +180,7 @@ async def upstream(event):
 
     if force_update:
         await event.edit(
-            '`Force-Syncing to latest stable userbot code, please wait...`')
+            '`Paksa sinkronisasi untuk kode userbot terakhir stabil, Mohon tunggu...`')
     else:
         await event.edit('`Memperbarui userbot, Mohon tunggu....`')
     if conf == "now":
@@ -193,9 +193,9 @@ async def upstream(event):
 CMD_HELP.update({
     'update':
     ">`.update`"
-    "\nUsage: Checks if the main userbot repository has any updates and shows a changelog if so."
+    "\nPenggunaan: memeriksa apakah repositori userbot utama memiliki pemutakhiran dan menunjukkan changelog bila demikian ."
     "\n\n>`.update now`"
-    "\nUsage: Update your userbot, if there are any updates in your userbot repository."
+    "\nid: Penggunaan: Perbarui userbot Anda, bila ada pembaruan di repositori userbot Anda."
     "\n\n>`.update deploy`"
-    "\nUsage: Deploy your userbot, if there are any updates in your userbot repository."
+    "\nPenggunaan: sebarkan userbot Anda, bila ada pembaruan di repositori userbot Anda."
 })
