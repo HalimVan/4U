@@ -69,7 +69,7 @@ async def permitpm(event):
 
                 if COUNT_PM[event.chat_id] > 4:
                     await event.respond(
-                        "Kau spamming my Master's PM,yang aku tidak suka .\n"
+                        "Kau mengirim pesan terlalu banyak, dan membuatku tidak suka .\n"
                         "Anda telah diblokir dan dilaporkan sebagai SPAM, sampai pemberitahuan lebih lanjut ."
                     )
 
@@ -80,7 +80,7 @@ async def permitpm(event):
                         if BOTLOG:
                             await event.client.send_message(
                                 BOTLOG_CHATID,
-                                "Count PM is seemingly going retard, plis restart bot!",
+                                "Menghitung PESAN tampaknya akan menghambat, plis mulai ulang bot!!",
                             )
                         return LOGS.info("CountPM wen't rarted boi")
 
@@ -128,7 +128,7 @@ async def auto_accept(event):
                 if is_approved(event.chat_id) and BOTLOG:
                     await event.client.send_message(
                         BOTLOG_CHATID,
-                        "#AUTO-APPROVED\n" + "User: " +
+                        "#OTOMATIS-SETUJU\n" + "User: " +
                         f"[{chat.first_name}](tg://user?id={chat.id})",
                     )
 
@@ -213,7 +213,7 @@ async def disapprovepm(disapprvpm):
         name0 = str(aname.first_name)
 
     await disapprvpm.edit(
-        f"[{name0}](tg://user?id={disapprvpm.chat_id}) `Disaproved to PM!`")
+        f"[{name0}](tg://user?id={disapprvpm.chat_id}) `Tidak menyetujui PM!`")
 
     if BOTLOG:
         await disapprvpm.client.send_message(
@@ -232,12 +232,12 @@ async def blockpm(block):
         aname = replied_user.id
         name0 = str(replied_user.first_name)
         await block.client(BlockRequest(replied_user.id))
-        await block.edit("`You've been blocked!`")
+        await block.edit("`Anda telah diblokir!`")
         uid = replied_user.id
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit("`You've been blocked!`")
+        await block.edit("Anda telah diblokir!`")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
