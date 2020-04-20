@@ -129,7 +129,7 @@ async def amireallyalive(alive):
                      f"`Python  :{python_version()} \n"
                      f"`Telethon :{version.__version__} \n\n"
                       "------------------------------------ \n"
-                     f"`Pengguna : `{DEFAULTUSER} \n"
+                     f"`Pengguna :`{DEFAULTUSER} \n"
                       "------------------------------------\n"
                      f"`Tetaplah Hidup Walaupun Tidak Berguna \n"
                       "------------------------------------")
