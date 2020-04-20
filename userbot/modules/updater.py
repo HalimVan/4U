@@ -108,7 +108,7 @@ async def update(event, repo, ups_rem, ac_br):
 
 @register(outgoing=True, pattern=r"^.up(?: |$)(n/?deploy)?")
 async def upstream(event):
-    "For .update command, check if the bot is up to date, update if specified"
+    "For .up command, check if the bot is up to date, update if specified"
     await event.edit("`Memeriksa pembaruan, silakan tunggu....`")
     conf = event.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
@@ -127,7 +127,7 @@ async def upstream(event):
         if conf is None:
             return await event.edit(
                 f"`Sayangnya, direktori {error} sepertinya bukan repositori git."
-                "\nTapi kita bisa memperbaikinya dengan paksa memperbarui userbot menggunakan .update now.`"
+                "\nTapi kita bisa memperbaikinya dengan paksa memperbarui userbot menggunakan .upn.`"
             )
         repo = Repo.init()
         origin = repo.create_remote('upstream', off_repo)
