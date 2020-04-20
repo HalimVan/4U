@@ -125,14 +125,14 @@ async def amireallyalive(alive):
     await alive.edit("`• 4U BOT \n`"
                      "-------------------------------------------- \n"
                      "`Aku hidup, untuk melayanimu.... \n"
-                     "------------------------------------ \n\n"
+                     "-------------------------------------------- \n\n"
                      f"`Python  :{python_version()} \n"
                      f"`Telethon :{version.__version__} \n\n"
                       "------------------------------------ \n"
                      f"`Pengguna :`{DEFAULTUSER} \n"
-                      "------------------------------------\n"
+                      "------------------------------------------- \n"
                      f"`Tetaplah Hidup Walaupun Tidak Berguna \n"
-                      "------------------------------------")
+                      "------------------------------------------- ")
 
 
 @register(outgoing=True, pattern="^.aliveu")
