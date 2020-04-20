@@ -132,7 +132,7 @@ async def amireallyalive(alive):
                       "------------------------------------------- \n"
                      f"`Pengguna :{DEFAULTUSER} \n"
                       "------------------------------------------- \n"
-                      "Tetaplah Hidup Walaupun Tidak Berguna
+                      "Tetaplah Hidup Walaupun Tidak Berguna \n"
                       "-------------------------------------------")
 
 
