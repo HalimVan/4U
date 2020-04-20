@@ -128,11 +128,11 @@ async def amireallyalive(alive):
                      "-------------------------------------------- \n\n"
                      f"`Python  :{python_version()} \n"
                      f"`Telethon :{version.__version__} \n\n"
-                      "------------------------------------ \n"
-                     f"`Pengguna :`{DEFAULTUSER} \n"
                       "------------------------------------------- \n"
+                     f"`Pengguna :`{DEFAULTUSER} \n"
+                      "----------------------------------------------------- \n"
                      f"`Tetaplah Hidup Walaupun Tidak Berguna \n"
-                      "------------------------------------------- ")
+                      "----------------------------------------------------- ")
 
 
 @register(outgoing=True, pattern="^.aliveu")
