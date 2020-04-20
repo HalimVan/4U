@@ -106,7 +106,7 @@ async def update(event, repo, ups_rem, ac_br):
     return
 
 
-@register(outgoing=True, pattern=r"^.update(?: |$)(now|deploy)?")
+@register(outgoing=True, pattern=r"^.up(?: |$)(n/?deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     await event.edit("`Memeriksa pembaruan, silakan tunggu....`")
@@ -158,7 +158,7 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n`USERBOT Anda`  **sudah ter-update **  `dengan`  **{UPSTREAM_REPO_BRANCH}**\n')
+            f'\n`USERBOT Anda`  ** ter-update **  `dengan`  **{UPSTREAM_REPO_BRANCH}**\n')
         return repo.__del__()
 
     if conf is None and force_update is False:
@@ -176,7 +176,7 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('`ketik perintah ".update now/deploy" untuk memperbarui`')
+        return await event.respond('`ketik perintah ".upn/deploy" untuk memperbarui`')
 
     if force_update:
         await event.edit(
@@ -192,9 +192,9 @@ async def upstream(event):
 
 CMD_HELP.update({
     'update':
-    ">`.update`"
+    ">`.up`"
     "\nPenggunaan: memeriksa apakah repositori userbot utama memiliki pemutakhiran dan menunjukkan changelog bila demikian ."
-    "\n\n>`.update now`"
+    "\n\n>`.upn`"
     "\nid: Penggunaan: Perbarui userbot Anda, bila ada pembaruan di repositori userbot Anda."
     "\n\n>`.update deploy`"
     "\nPenggunaan: sebarkan userbot Anda, bila ada pembaruan di repositori userbot Anda."
