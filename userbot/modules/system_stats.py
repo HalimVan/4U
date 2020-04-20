@@ -130,9 +130,7 @@ async def amireallyalive(alive):
                      f"`Telethon :{version.__version__} \n\n"
                       "------------------------------------------- \n"
                      f"`Pengguna :`{DEFAULTUSER} \n"
-                      "----------------------------------------------------- \n"
-                     f"`Tetaplah Hidup Walaupun Tidak Berguna \n"
-                      "----------------------------------------------------- ")
+                      "------------------------------------------- \n
 
 
 @register(outgoing=True, pattern="^.aliveu")
