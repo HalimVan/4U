@@ -25,7 +25,7 @@ KANGING_STR = [
     "Mencuri stiker ini ...",
     "Hei itu stiker yang bagus !boleh kalau aku curi?!..",
     "Pak aku curi stiker mu ya \nhehe .",
-    "lihat ke sana ( ☉ ｡ ☉)!→\ \ tidak sayangnya aku curi ini...",
+    "lihat ke sana ( ☉ ｡ ☉)!→\ \ tidak sayangnya aku curi stiker ini...",
     "Pergi ke tuban, beli buah rambutan, mantan ke pelaminan, kenapa kamu masih sendirian:p",
     "...",
     "Sedang mengawasi sekitar ... ",
