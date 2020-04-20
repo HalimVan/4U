@@ -126,10 +126,10 @@ async def amireallyalive(alive):
                      "-------------------------------------------- \n"
                      "`Aku hidup, untuk melayanimu.... \n"
                      "------------------------------------ \n\n"
-                     f"`Python   :{python_version()} \n"
+                     f"`Python  :{python_version()} \n"
                      f"`Telethon :{version.__version__} \n\n"
                       "------------------------------------ \n"
-                     f"`Pengguna :`{DEFAULTUSER} \n"
+                     f"`Pengguna : `{DEFAULTUSER} \n"
                       "------------------------------------\n"
                      f"`Tetaplah Hidup Walaupun Tidak Berguna \n"
                       "------------------------------------")
