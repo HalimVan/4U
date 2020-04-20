@@ -239,8 +239,9 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)} detik` yang lalu"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"Aku pergi AFK sejak {afk_since}.\
-                        \nKarena: `{AFKREASON}`")
+                    await sender.reply(f"Aku pergi AFK
+                                       f"\nKarena: `{AFKREASON}`"
+                                       f"\nAFK SEJAK: `{afk_str}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
                 USERS.update({sender.sender_id: 1})
@@ -249,7 +250,7 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await sender.reply(f"Aku masih AFK sejak {afk_since}.\
-                            \nKarena: `{AFKREASON}`")
+                            \nKarena: `{AFKREASON}`"
                     else:
                         await sender.reply(str(choice(AFKSTR)))
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
