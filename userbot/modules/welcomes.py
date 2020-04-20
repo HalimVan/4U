@@ -107,9 +107,9 @@ async def save_welcome(event):
         string = rep_msg.text
     success = "`Welcome note {} for this chat.`"
     if add_welcome_setting(event.chat_id, 0, string, msg_id) is True:
-        await event.edit(sukses.format('tersimpan'))
+        await event.edit(Success.format('tersimpan'))
     else:
-        await event.edit(sukses.format('terbaru'))
+        await event.edit(Success.format('terbaru'))
 
 
 @register(outgoing=True, pattern="^.cw$")
