@@ -183,7 +183,7 @@ async def upstream(event):
             '`Paksa sinkronisasi untuk kode userbot terakhir stabil, Mohon tunggu...`')
     else:
         await event.edit('`Memperbarui userbot, Mohon tunggu....`')
-    if conf == "now":
+    if conf == "n":
         await update(event, repo, ups_rem, ac_br)
     elif conf == "deploy":
         await deploy(event, repo, ups_rem, ac_br, txt)
