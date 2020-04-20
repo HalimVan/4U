@@ -64,10 +64,10 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) \
             + str(stderr.decode().strip())
 
-        await event.edit("`Userbot Version: "
+        await event.edit("`Versi 4U BOT: "
                          f"{verout}"
                          "` \n"
-                         "`Revision: "
+                         "`Revisi: "
                          f"{revout}"
                          "`")
     else:
@@ -145,7 +145,7 @@ async def amireallyaliveuser(username):
         newuser = message[8:]
         global DEFAULTUSER
         DEFAULTUSER = newuser
-        output = 'Successfully changed user to ' + newuser + '!'
+        output = ' Sukses mengubah pengguna ke ' + newuser + '!'
     await username.edit("`" f"{output}" "`")
 
 
@@ -154,7 +154,7 @@ async def amireallyalivereset(ureset):
     """ For .resetalive command, reset the username in the .alive command. """
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-    await ureset.edit("`" "Successfully reset user for alive!" "`")
+    await ureset.edit("`" "Berhasil me-reset pengguna untuk hidup!" "`")
 
 
 CMD_HELP.update({
