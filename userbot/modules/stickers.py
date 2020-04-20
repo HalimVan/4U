@@ -28,7 +28,7 @@ KANGING_STR = [
     "lihat ke sana ( ☉ ｡ ☉)!→\ \ tidak sayangnya aku curi stiker ini...",
     "Pergi ke tuban, beli buah rambutan, mantan ke pelaminan, kenapa kamu masih sendirian:p",
     "...",
-    "Sedang mengawasi sekitar ... ",
+    "Sedang mengawasi sekitar untuk mencuri stiker ini ... ",
 ]
 
 
