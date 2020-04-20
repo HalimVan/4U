@@ -124,12 +124,15 @@ async def amireallyalive(alive):
     """ For .on command, check if the bot is running.  """
     await alive.edit("`• 4U BOT \n`"
                      "-------------------------------------------- \n"
-                     "`Aku hidup, untuk melayanimu.... \n"
+                     "`Aku hidup, untuk melayanimu \n"
                      "-------------------------------------------- \n\n"
                      f"`Python  :{python_version()} \n"
+                      "------------------------------------------- \n"
                      f"`Telethon :{version.__version__} \n\n"
                       "------------------------------------------- \n"
-                     f"`Pengguna :`{DEFAULTUSER} \n"
+                     f"`Pengguna :{DEFAULTUSER} \n"
+                      "------------------------------------------- \n"
+                     f"`Pengguna :{DEFAULTUSER} \n"
                       "-------------------------------------------")
 
 
