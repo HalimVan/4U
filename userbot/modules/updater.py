@@ -106,7 +106,7 @@ async def update(event, repo, ups_rem, ac_br):
     return
 
 
-@register(outgoing=True, pattern=r"^.up(?: |$)(n/?deploy)?")
+@register(outgoing=True, pattern=r"^.update(?: |$)(now/?deploy)?")
 async def upstream(event):
     "For .up command, check if the bot is up to date, update if specified"
     await event.edit("`Memeriksa pembaruan, silakan tunggu....`")
@@ -127,7 +127,7 @@ async def upstream(event):
         if conf is None:
             return await event.edit(
                 f"`Sayangnya, direktori {error} sepertinya bukan repositori git."
-                "\nTapi kita bisa memperbaikinya dengan paksa memperbarui userbot menggunakan .upn.`"
+                "\nTapi kita bisa memperbaikinya dengan paksa memperbarui userbot menggunakan .update now.`"
             )
         repo = Repo.init()
         origin = repo.create_remote('upstream', off_repo)
@@ -176,14 +176,14 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('`ketik perintah ".upn/deploy" untuk memperbarui`')
+        return await event.respond('`ketik perintah ".update now/deploy" untuk memperbarui`')
 
     if force_update:
         await event.edit(
             '`Paksa sinkronisasi untuk kode userbot terakhir stabil, Mohon tunggu...`')
     else:
         await event.edit('`Memperbarui userbot, Mohon tunggu....`')
-    if conf == "n":
+    if conf == "now":
         await update(event, repo, ups_rem, ac_br)
     elif conf == "deploy":
         await deploy(event, repo, ups_rem, ac_br, txt)
@@ -192,9 +192,9 @@ async def upstream(event):
 
 CMD_HELP.update({
     'update':
-    ">`.up`"
+    ">`.update`"
     "\nPenggunaan: memeriksa apakah repositori userbot utama memiliki pemutakhiran dan menunjukkan changelog bila demikian ."
-    "\n\n>`.upn`"
+    "\n\n>`.update now`"
     "\nid: Penggunaan: Perbarui userbot Anda, bila ada pembaruan di repositori userbot Anda."
     "\n\n>`.update deploy`"
     "\nPenggunaan: sebarkan userbot Anda, bila ada pembaruan di repositori userbot Anda."
