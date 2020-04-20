@@ -130,7 +130,7 @@ async def amireallyalive(alive):
                      f"------------------------------------ \n"
                      f"•  ユーザー :`{DEFAULTUSER} \n"
                      f"------------------------------------ \n"
-                     f"•  グループのサポート :`[グループ](https://t.me/joinchat/M8rxgxloiibonOfOOSSuNQ) \n"
+                     f"•  グループのサポート :`[グループ](@ShizukaSupport) \n"
                      f"•  シャネルのサポート :`[シャネル](https://t.me/ShizukaChanel) \n"
                      f"------------------------------------ \n"
                      f"•  無駄にもかかわらずに滞在 \n"
